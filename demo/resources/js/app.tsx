@@ -4,7 +4,6 @@ import { createInertiaApp } from '@inertiajs/react';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { createRoot } from 'react-dom/client';
 import { initializeTheme } from './hooks/use-appearance';
-<<<<<<< HEAD
 import { configureEcho } from '@laravel/echo-react';
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
@@ -21,12 +20,6 @@ configureEcho({
   cluster: "mt1",
 });
 
-
-=======
-
-const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
-
->>>>>>> affdfd6a0e907bcbd3ec9d380b681a8878174851
 createInertiaApp({
     title: (title) => title ? `${title} - ${appName}` : appName,
     resolve: (name) => resolvePageComponent(`./pages/${name}.tsx`, import.meta.glob('./pages/**/*.tsx')),
